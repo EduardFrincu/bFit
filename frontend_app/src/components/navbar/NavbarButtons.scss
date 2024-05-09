@@ -1,0 +1,46 @@
+@import '../../assets/scss/variables.scss';
+:root{
+    --primary: #EDE6DB;
+
+}
+.nav-btn{
+    padding: 8px 20px;
+    border-radius: 5px;
+    outline: none;
+    border:none;
+    cursor:pointer;
+}
+
+.nav-btn:hover{
+    padding:8px 20px;
+    transform: all 0.3 ease-out;
+    background: $bg-light;
+    color: $bg-second;
+    transform: 250ms;
+    transition: 0.3s all ease-out;
+
+}
+.btn--primary{
+    background-color: var(--primary);
+
+}
+.btn--outline{
+    background-color: transparent;
+    color:white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    transition: all 0.3 ease-out;
+}
+.btn--medium{
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    color:$bg-light;
+}
+.btn--large{
+    padding: 12px 26px;
+    border-radius: 5px;
+    font-size: 20px;
+    color:white;
+}

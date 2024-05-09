@@ -1,0 +1,271 @@
+@import '../../assets/scss/variables.scss';
+#content{
+    display: flex;
+    height: calc(100% - 80px);
+    #today-diary-container{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: fit-content;
+        margin-right: auto;
+        margin-left:auto;
+        padding: 2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 8px;
+        align-self:center;
+        height: fit-content;
+        justify-content: space-around;
+        #diary{
+            display: flex;
+            justify-content: space-around;
+            #progressbar{
+                width:47%;
+                display: flex;
+                align-items: center;
+            }
+            #diary-content{
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+                width: 47%;
+                
+                .logged-meal{
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: ridge;
+                    p{
+                        margin-bottom: 0;
+                    }
+                    .add-btn{
+                        height: 25px;
+                        transform:translateY(40%);
+                        width: 30px;
+                        background-color: $btn;
+                        border:none;
+                        cursor: pointer;
+                        border-radius:5px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        transition: 0.3s all ease-out;
+                        svg{
+                            font-size:18px;
+                            color:white;
+                        }
+                    }
+                }
+                .diary-info{
+                    padding-top:10px;
+                    text-align: justify;
+                    svg{
+                        color:#FFA500;
+                    }
+                }
+            }
+        }
+        #macro{
+            display: flex;
+            margin-top:4vh;
+            .macro-data{
+                margin-right: 10px;
+            }
+        }
+        #more-details{
+            margin-top: 2vh;
+            .more-btn{
+                    height: 36px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    transform:translateY(8%);
+                    font-size: 20px;
+                    color:white;
+                    cursor:pointer;
+                    background-color: $btn;
+                    border:none;
+                    border-radius:5px;
+                    transition: 0.3s;
+                    margin-top:20px;
+                        svg{
+                            font-size:18px;
+                            color:white;
+                        }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 465px) {
+    #macro{
+        flex-flow: column;
+        .macro-data{
+            padding-top:5px;
+        }
+        
+    }
+    #diary{
+        flex-flow: column;
+        #progressbar{
+            width: 100% !important;
+        }
+        #diary-content{
+            width: 100% !important;
+        }
+    }
+}
+@media screen and (max-height: 740px) {
+    #today-diary-container{
+        margin-top:100px;
+    }
+}
+
+
+#page{
+    height: calc(100% - 80px);
+    display: flex;
+    flex-flow: column;
+    #insert-meal-log{
+        display: flex;
+        margin-top: auto;
+        flex-flow: column;
+        margin-bottom: auto;
+    }
+}
+
+.mealtype{
+    .add-btn{
+        height: 25px;
+        margin-top: 3px;
+        position:absolute;
+        margin-left: 10px;
+        width: 30px;
+        background-color: $btn;
+        border:none;
+        cursor: pointer;
+        border-radius:5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: 0.3s all ease-out;
+        svg{
+            font-size:18px;
+            color:white;
+        }
+    }
+    .add-btn:hover{
+        transition: 0.3s all ease-in-out;
+        font-size:20px;
+        cursor: pointer;
+        height: 28px;
+        width: 33px;
+        background-color: $bg-light;
+        svg{
+            transition: 0.3s all ease-in-out;
+            font-size:20px;
+        }
+    }
+}
+.error-container{
+    background-color: rgba(245, 0, 0, 0.37);
+    margin-top: 10%;
+    padding: 4vw;
+    .btn{
+        background-color: $btn;
+        border:none;
+        cursor: pointer;
+        border-radius:5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: 0.3s all ease-out;
+        font-size:20px;
+        color:white;
+        padding:10px;
+        
+    }
+    .btn:hover{
+        transition: 0.3s all ease-in-out;
+        font-size:20px;
+        cursor: pointer;
+        background-color: $bg-light;
+        color:white;
+        padding:15px;
+    }
+
+}
+
+
+div.card{
+    width: 300px;
+    padding-bottom:25px;
+    display: flex;
+    height: 350px;
+    background-color: $btn-hover;
+    color: white;
+    flex-flow: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 30px;
+    border-radius: 5px;
+    .progress-bar{
+        width: 170px;
+        height: 170px;
+        display: flex;
+        margin-top: 5px;
+        align-self: center;
+        margin-bottom: 5px;
+    }
+    .macros-stats{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        border-top:ridge;
+        padding-top:10px;
+        .proteins{
+            width: 30%;
+            div{
+                margin-top:10px;
+            }
+        }
+        .carbs{
+            width: 30%;
+            div{
+                margin-top:10px;
+            }
+        }
+        .fats{
+            width: 30%;
+            div{
+                margin-top:10px;
+            }
+        }
+    }
+    .date{
+        border-bottom:ridge;
+        h3{
+            margin: 11px;
+            font-weight: 100;
+        }
+    
+
+    }
+}
+div.card:hover{
+    background-color:$btn;
+    transition:all 0.3s ease-in-out;
+    margin-bottom: 5px;
+    transform: translateY(-2%);
+}
+
+.history-container{
+    display: grid;
+    margin-right: auto;
+    grid-template-columns: repeat(4, auto);
+    margin-left: auto;
+    background: white;
+    width: fit-content;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+a{
+    text-decoration: none;
+}
+#history{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.diary-details{
+    background: linear-gradient(30deg, rgba(237,230,219,1) 0%, rgba(26,60,64,1) 59%);
+}

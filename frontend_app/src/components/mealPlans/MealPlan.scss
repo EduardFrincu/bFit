@@ -1,0 +1,279 @@
+@import '../../assets/scss/variables.scss';
+body{
+    background-color: $bg-second;
+    background: linear-gradient(30deg, rgba(237,230,219,1) 0%, rgba(26,60,64,1) 59%) no-repeat center center fixed;
+    h3{
+        color:white;
+    }
+}
+div#progress-bar{
+    margin-left:auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top:50px;
+    margin-bottom: 20vh;
+}
+.step-btn{
+    height: 36px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform:translateY(8%);
+    font-size: 20px;
+    color:white;
+    cursor:pointer;
+    background-color: $btn;
+    border:none;
+    border-radius:5px;
+    transition: 0.3s;
+    margin-top:20px;
+    margin-left:5px;
+    margin-right:5px;
+    width:40px;
+}
+.finish-btn{
+    width:auto;
+}
+.step-btn:hover{
+    background-color: $btn-hover;
+    transition: 0.3s all ease-out;
+}
+
+.meal-container, .container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left:auto;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    .mealPlan-title{
+        color: $btn-hover;
+    }
+    .food-qty{
+        width:100%;
+        margin:1%;  
+        div.suggestions{
+            position: absolute;
+            z-index: 5;
+            background: #1D5C63;
+            width: calc(20vw + 30px);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            max-height: 30vh;
+            overflow-y: auto;
+            
+            ul.suggestion{
+                padding: 7px 0px;
+                border-style: none;
+                margin: 0;
+                border-top-style: groove;
+                color:white;
+      
+            }
+            ul.suggestion:hover{
+                cursor:pointer;
+                background-color: $bg-light;
+                transition: 0.3s all ease-out;
+                
+            }
+            
+        }
+        ul.suggestion:last-child{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .form-control{
+            margin-right: 5px;
+            width: 20vw;
+            height: 35px;
+            font-size:20px;
+            border-radius: 5px;       
+            border: 0ch;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            color: $btn-hover;     
+                
+        }
+        .name-input{
+            color:$btn-hover;
+            background-color: $bg-main-darker;
+            
+        }
+        .food-input{
+            background: url("https://cdn-icons-png.flaticon.com/512/3296/3296395.png") no-repeat left;
+            background-size: 30px;
+            color:$btn-hover;
+            background-color: $bg-main-darker;
+            padding-left: 30px;
+        }
+        .qty-input{
+            background: url("https://cdn2.iconfinder.com/data/icons/unit-of-measurement/500/measurement-unit_4-512.png") no-repeat left;
+            background-size: 30px;
+            padding-left: 30px;
+            color:$btn-hover;
+            background-color: $bg-main-darker;
+        }
+        .remove-btn{
+            height: 36px;
+            transform:translateY(8%);
+            width: 40px;
+            background-color: $btn;
+            border:none;
+            cursor: pointer;
+            border-radius:5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 0.3s all ease-out;
+            svg{
+                font-size:25px;
+                color:white;
+            }
+        }
+        .remove-btn:hover{
+            background-color: $btn-remove;
+        }
+    }
+    .btn-box{
+        width:fit-content;
+        margin-top:1%;
+        .add-btn{
+            height: 36px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transform:translateY(8%);
+            font-size: 20px;
+            color:white;
+            cursor:pointer;
+            background-color: $btn;
+            border:none;
+            border-radius:5px;
+            transition: 0.3s;
+            margin-top:20px;
+        }
+        .add-btn:hover{
+            background-color: $btn-add;
+        }
+    }
+
+}
+
+
+
+
+
+
+//viewMealPlan
+
+.mealPlans-container{
+    width: 70% !important;
+    margin-top:2vh;
+    
+    color:$bg-darker;
+    .meals-container{
+        background: $bg-main;
+        border-radius: 5px;
+        margin-bottom: 5vh;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        .mealtype::first-letter{
+            text-transform: capitalize;
+        }
+        @media screen and (max-width: 900px) {
+            table{
+                display:block;
+        
+            }}
+        table{
+            width:100%;
+            border-collapse: collapse;
+            
+            
+            overflow-x: auto;
+            thead th{
+                text-align: center;
+                border-bottom: 2px solid;
+                background: $btn-hover;
+                color: $bg-second;
+                height: 6vh;
+            }
+            thead button {
+                background: $btn-hover;
+                color: $bg-second;
+                border: 0;
+                border-radius: none;
+                font-family: inherit;
+                font-weight: 500;
+                font-size: inherit;
+                padding: 0.5em;
+                height:6vh
+            }
+            thead button:hover{
+                background-color: $bg-light;
+                cursor: pointer;
+                transition: 0.3s all ease-in-out;
+            }
+            thead button.ascending::after{
+                display: inline-block;
+                margin-left: 1em;
+                content: '🠑';
+            }
+            thead button.descending::after{
+                display: inline-block;
+                margin-left: 1em;
+                content: '🠓';
+            }
+            tbody{
+                padding:0.5em;
+                border-bottom: 1px solid #ccc;
+                tr{
+                    height: 6vh;
+                    border-bottom: 1px solid;
+                    .delete-btn{
+                        background: transparent;
+                        border: none;
+                        color: $btn;
+                        font-size: 16px;
+                    }
+                    .delete-btn:hover{
+                        transition: 0.3s all ease-in-out;
+                        color:$bg-light;
+                        cursor: pointer;
+                        font-size: 18px;
+                    }
+                }
+                #totalsRow{
+                    background-color: $btn-hover;
+                    color:$bg-second;
+                }
+            }
+            tbody tr:hover{
+                background-color: #eee;
+            }
+
+
+        }
+    }
+}
+
+.mealPlans-container.collapsed{
+    height: 50px;
+    overflow-y: hidden;
+    text-align: left;
+    padding-top: 0;
+    h1{
+        margin-bottom: 50px;
+    }
+}
+div#expansion-state-icon{
+    position: absolute;
+    margin-top: 1vw;
+    right: 12vw;
+    font-size: 30px;
+    color: $bg-light;
+    .container-icon{
+        margin-left: 1rem;;
+    }
+    .container-icon:hover{
+        cursor: pointer;
+        color: $btn-hover;
+        transition: 0.3s all ease-in-out;
+    }
+}
+
